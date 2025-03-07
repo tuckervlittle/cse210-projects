@@ -4,11 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("Enter your grade percentage (eg. 85): ");
+        Console.Write("Enter your grade percentage (eg. 85)? ");
         string userGradeInput = Console.ReadLine();
 
         int grade = int.Parse(userGradeInput);
-        string letter = "Z";
+        string letter = "";
 
         if (grade >= 90)
         {
