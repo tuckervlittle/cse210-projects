@@ -1,0 +1,32 @@
+
+Class: Journal
+
+Attributes:
+* _entries : List<Entry>
+
+Behaviors:
+* AddEntry(newEntry : Entry) : void
+* DisplayAllEntries() : void
+* Save(file : string) : void
+* Load(file : string) : void
+---------------------------------------
+
+Class: Entry
+
+Attributes:
+* _date : string
+* _promptText : string
+* _inputText : string
+
+Behaviors:
+* Display() : void
+---------------------------------------
+
+Class: PromptGenerator
+
+Attributes:
+* _prompts : List<string>
+
+Behaviors:
+* GetRandomPrompt() : string
+---------------------------------------
