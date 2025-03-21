@@ -1,0 +1,133 @@
+-------------------------------------------------
+
+Class: Scripture
+
+Attributes:
+_reference : Reference
+_words : List<Word>
+
+Constructors:
+Scripture(Reference : Reference, text : string)
+
+Behaviors:
+HideRandomWords(numberToHide : int) : void
+GetDisplayText() : string
+IsCompletelyHidden() : bool
+-------------------------------------------------
+
+Class: Reference
+
+Attributes:
+_book : string
+_chapter : int
+_verse : int
+_endVerse : int
+
+Constructors:
+Reference(book : string, chapter : int, verse : int)
+Reference(book : string, chapter :int, startverse : int, endVerse : int)
+
+Behaviors:
+GetDisplayText() : string
+-------------------------------------------------
+
+Class: Word
+
+Attributes:
+_text : string
+_isHidden : bool
+
+Constructors :
+Word(text : string)
+
+Behaviors:
+Hide() : void
+Show() : void
+IsHidden() : bool
+GetDisplayText() : string
+-------------------------------------------------
+
+Step 4.
+
+What does the program do?
+ The program helps the user to memorize scripture passages
+by displaying the passage, then replacing a few words at a
+time with blanks.
+
+What user inputs does it have?
+ The input is enter (to continue) or 'quit'.
+
+What output does it produce?
+ The output is a scripture reference, the quoted
+scripture as a whole to begin with, then the quoted
+scripture with blanks as the user goes along.
+
+How does the program end?
+ The program would end when the user types 'Quit' or
+after all the words are blank and the user hits enter.
+
+Step 5.
+
+What are good candidates for classes in this program?
+ Scripture, Reference, Word
+
+What are the primary responsibilities of each class?
+ Scripture: Takes the reference and the text of the scripture,
+clears the display, hides words and displays the text with the
+blanks.
+ Reference: Holds the book, chapter, and verse reference info.
+ Word: Holds whether a word should be shown or not.
+
+Step 6.
+
+What are the behaviors this class will have in order to fulfill
+its responsibilities?
+
+Scripture:
+ HideRandomWords(numberToHide : int) : void
+ GetDisplayText() : string
+ IsCompletelyHidden() : bool
+
+Reference:
+ GetDisplayText() : string
+
+Word:
+ Hide() : void
+ Show() : void
+ IsHidden() : bool
+ GetDisplayText() : string
+
+Step 7.
+
+What attributes does this class need to fulfill its behaviors?
+What are the data types of these member variables?
+
+Scripture:
+ _reference : Reference
+ _words : List<Word>
+ 
+Reference:
+ _book : string
+ _chapter : int
+ _verse : int
+ _endVerse : int
+
+Word:
+ _text : string
+ _isHidden : bool
+
+Step 8.
+
+What constructors should each class have?
+
+Scripture:
+ Scripture(Reference : Reference, text : string)
+
+Reference:
+ Reference(book : string, chapter : int, verse : int)
+ Reference(book : string, chapter :int, startverse : int, endVerse : int)
+
+Word:
+ Word(text : string)
+
+What other work needs to be done to set up these objects?
