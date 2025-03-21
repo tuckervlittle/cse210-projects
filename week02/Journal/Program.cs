@@ -21,12 +21,39 @@ class Program
             
             if (choice == 1)
             {
+                Console.Clear();
                 string prompt = promptGenerator.GetRandomPrompt();
                 Console.WriteLine($"Prompt: {prompt}");
                 Console.Write(">");
 
                 string entryText = Console.ReadLine();
-                C
+                Entry entry = new Entry(prompt, entryText);
+                journal.AddEntry(entry);
+            }
+            else if (choice == 2)
+            {
+                Console.Clear();
+                journal.DisplayAllEntries();
+            }
+            else if (choice == 3)
+            {
+                Console.Write("What is the name of the journal you are trying to load? ");
+                string file = Console.ReadLine();
+                journal.LoadFromFile(file);
+            }
+            else if (choice == 4)
+            {
+                Console.Write("What would you like to name your journal? ");
+                string file = Console.ReadLine();
+                journal.SaveToFile(file);
+            }
+            else if (choice == 5)
+            {
+                Console.WriteLine("Goodbye");
+                break;
+            }
+            else {
+                Console.WriteLine("Invalid option. Try again!");
             }
         }
     }

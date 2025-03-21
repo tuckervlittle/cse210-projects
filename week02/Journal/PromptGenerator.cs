@@ -1,5 +1,4 @@
 using System;
-using System.Net.Http.Headers;
 
 public class PromptGenerator
 {
@@ -19,10 +18,5 @@ public class PromptGenerator
         string randomPrompt = _prompts[i];
 
         return randomPrompt;
-    }
-
-    public static implicit operator string(PromptGenerator v)
-    {
-        throw new NotImplementedException();
     }
 }

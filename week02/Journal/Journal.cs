@@ -1,15 +1,12 @@
 using System;
-using System.Diagnostics.Tracing;
 
 public class Journal
 {
     public List<Entry> _entries = new List<Entry>();
 
-    public void AddEntry()
+    public void AddEntry(Entry entry)
     {
-        string today = DateTime.Now.ToString("MM/dd/yyyy");
-
-        string prompt = new PromptGenerator();
+        _entries.Add(entry);
     }
     public void DisplayAllEntries()
     {
@@ -49,7 +46,7 @@ public class Journal
                     string date = parts[0];
                     string promptText = parts[1];
                     string inputText = parts[2];
-                    _entries.Add(new Entry{_date = date, _promptText = promptText, _inputText = inputText});
+                    _entries.Add(new Entry(date, promptText, inputText));
                 }
             }
             Console.WriteLine($"Journal loaded from {file}.txt.");
