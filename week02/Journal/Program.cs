@@ -1,3 +1,5 @@
+// Added feeling: to the journal entry
+
 using System;
 
 class Program
@@ -22,12 +24,15 @@ class Program
             if (choice == 1)
             {
                 Console.Clear();
+                Console.WriteLine("How are you feeling?");
+                Console.Write("> ");
+                string feeling = Console.ReadLine();
                 string prompt = promptGenerator.GetRandomPrompt();
                 Console.WriteLine($"Prompt: {prompt}");
-                Console.Write(">");
+                Console.Write("> ");
 
                 string entryText = Console.ReadLine();
-                Entry entry = new Entry(prompt, entryText);
+                Entry entry = new Entry(prompt, entryText, feeling);
                 journal.AddEntry(entry);
             }
             else if (choice == 2)
