@@ -1,0 +1,63 @@
+-------------------------------------------------
+
+Class: Order
+
+Attributes:
+- _customer : string
+- _products : List<Product>
+
+Constructors:
++ Order(customer : Customer)
+
+Behaviors:
++ AddProduct() : void
++ GetTotalCost() : double
++ GetShipping() : string
++ GetPacking() : string
+
+-------------------------------------------------
+
+Class: Product
+
+Attributes:
+- _name : string
+- _productID : int
+- _price : double
+- _quantity : int
+
+Constructors:
++ Product(name : string, productID : int, price : double, quantity : int)
+
+Behaviors:
++ TotalCost() : double
++ GetPackingInfo() : string
+-------------------------------------------------
+
+Class: Customer
+
+Attributes:
+- _name : string
+- _address : Address
+
+Constructors:
++ Customer(name : string, address : Address)
+
+Behaviors:
+
+-------------------------------------------------
+
+Class: Address
+
+Attributes:
+- _street : string
+- _city : string
+- _state : string
+- _country : string
+- _inUSA : bool
+
+Constructors:
++ Address(street : string, city : string, state : string, country : string)
+
+Behaviors:
+- InUSA(country : string) : bool
+-------------------------------------------------
